@@ -1,0 +1,367 @@
+/*RESET CSS START*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    /*list-style: none;*/
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/*RESET CSS END*/
+
+body {
+    margin: auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    height: 50px;
+    background-color: #4F4F4F;
+}
+
+#header section {
+    width: 1000px;
+    margin: 0px auto;
+    padding: 0;
+}
+
+#mainBody {
+    background-color: #fefefe;
+}
+
+#mainBody .mainBodyArticle {
+    width: 1000px;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.mainBodyArticle h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logoAnchor {
+    float: left;
+}
+
+.logoText {
+    float: left;
+    padding: 12px 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.menuUL {
+    float: right;
+    padding: 15px 100px;
+    margin: auto;
+    font-size: 14px;
+}
+
+.menuUL li {
+    padding: 0px 10px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.menuUL li + li {
+    border-left: 1px inset #eeeeee;
+}
+
+.menuUL a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.menuUL a:hover {
+    color: #8d8;
+}
+
+.mainSection {
+    width: 1000px;
+    margin: auto;
+    padding: 10px 0;
+    display: block;
+}
+
+.fixedCart {
+    position: fixed;
+    right: 1%;
+    top: 12%;
+    border: 1px dotted #800000;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.fixedCart button {
+    color: #e50;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.fixedCart a {
+    text-decoration: none;
+}
+
+#noOfItems, #totalCost, #noOfItems2, #totalCost2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #5a5a5a;
+}
+
+.clickImage {
+    color: #af5f5f;
+}
+
+#productsDivId {
+    /*visibility: visible;*/
+    display: block;
+}
+
+/*Hidden Div START */
+
+#prodSpecHidden {
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-image: url(../assets/images/TransContentBackground.png);
+}
+
+#prodSpecHidden #divInProdSpecHidden {
+    display: inline-block;
+    width: 800px;
+    height: 420px;
+    margin: 100px 20%;
+    background-color: #fafafa;
+    border: 5px double #446666;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+#divInProdSpecHidden a {
+    float: right;
+}
+
+.prodSpecHiddenSpec {
+    margin-left: 35%;
+    margin-top: 10px;
+}
+
+.prodSpecHiddenSpec b {
+    font-weight: bold;
+}
+
+.prodSpecHiddenSpec ul {
+    margin-top: 25px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.prodSpecHiddenSpec ul li {
+    margin-top: 10px;
+    list-style-type: circle;
+}
+
+.prodSpecHiddenImg {
+    float: left;
+    padding-left: 4%;
+}
+
+/*Hidden Div END */
+
+#prodHeadingDiv {
+    text-shadow: 0px 0px 5px #eaa;
+}
+
+.mobileImg img {
+    box-shadow: 0px 0px 10px 2px #afa;
+}
+
+.addToCart button {
+    cursor: pointer;
+}
+
+.productsOdd span, .productsEven span {
+    display: inline-block;
+    width: 155px;
+    height: 15px;
+    text-align: center;
+}
+
+.productsOdd {
+    padding: 15px;
+    padding-top: 15px;
+    background-color: #eeeeee;
+    /*margin: 0px 10px;*/
+}
+
+.productsEven {
+    padding: 15px;
+    padding-top: 15px;
+    background-color: #e5e5e5;
+    /*margin: 0px 10px;*/
+}
+
+.productsInCart span {
+    width: 135px;
+}
+
+#prodHeadingDivInCart span {
+    width: 135px;
+}
+
+.prodHeading {
+    background-color: #8a8a8a;
+    color: #ffffff;
+    font-weight: bold;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.nameofMobile {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #800000;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.mobileQuantity input {
+    width: 25px;
+}
+
+.imgOfMobile {
+    display: block;
+    float: left;
+    padding: 15px;
+    margin-right: 50px;
+}
+
+.priceOfMobile {
+    text-align: center;
+    padding: 15px;
+}
+
+.specOfMobile {
+    display: block;
+    padding: 10px 10px;
+    padding-top: 50px;
+}
+
+.specOfMobile b {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.specOfMobile ul {
+    padding-top: 10px;
+}
+
+.specOfMobile li {
+    padding-top: 10px;
+}
+
+#cartItemsPart {
+    /*visibility: hidden;*/
+    display: none;
+    width: 1000px;
+    margin: auto;
+    padding: 0;
+}
+
+#footer {
+    padding: 15px 10px;
+    padding-bottom: 15px;
+    height: 10px;
+    background-color: #4F4F4F;
+}
+
+#footer section {
+    font-size: 12px;
+    color: #eeeeee;
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+    padding: 0;
+}
+
+#footer .rights a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+#footer .terms a {
+    text-decoration: none;
+    color: #eeeeee;
+    padding-left: 50px;
+}
+

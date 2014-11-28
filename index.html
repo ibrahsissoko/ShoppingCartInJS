@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link href="css/stylesOne.css" type="text/css" rel="stylesheet">
+    <script src="js/scriptOne.js"></script>
+</head>
+<body>
+
+<header id="header">
+    <section>
+        <a href="#" class="logoAnchor"><img src="assets/images/shopping_cart.png" alt="Logo" width="50px"
+                                            height="50px"/></a>
+        <a href="#"><span class="logoText">Shopping Cart App</span></a>
+
+        <ul class="menuUL">
+            <li><a href="javascript:void(0)">Home</a></li>
+            <li><a href="javascript:void(0)">Products</a></li>
+            <li><a href="javascript:void(0)">View Cart</a></li>
+            <li><a href="javascript:void(0)">Blog</a></li>
+            <li><a href="javascript:void(0)">Contact</a></li>
+        </ul>
+
+    </section>
+</header>
+
+<section id="mainBody">
+    <article class="mainBodyArticle">
+        <div class="fixedCart">
+            <img src="assets/images/transparent-cart-icon-small.png" alt="" width="100px" height="100px"/> <br/>
+
+            <div>&nbsp;Items : <span id="noOfItems">0</span> <br/> <br/> &nbsp; Price : <span id="totalCost">0</span>
+            </div>
+            <br/>
+            <a href="javascript:void(0)" onclick="viewCart();">
+                <button id="viewCartBtnText">View Cart</button>
+                <br/><br/></a>
+        </div>
+        <h3>Mobile Store</h3><br/>
+
+        <p>Welcome to the Shopping Cart application. Please select the products and add them to cart if you wish to
+            purchase.</p>
+        <br/>
+
+        <p class="clickImage">Click on the image to view the specification.</p>
+
+        <br/>
+
+
+        <!--Hidden Div START-->
+        <div id="prodSpecHidden">
+            <div id="divInProdSpecHidden">
+                <div class="prodSpecHiddenImg">
+                    <img id="popupMobileImg" src="assets/images/sony-xperia-m-400x400-Black.jpeg"/>
+                </div>
+
+                <div class="prodSpecHiddenSpec">
+                    <b>Specifications & Key Features</b>
+                    <ul>
+                        <li>One-touch Functions with NFC</li>
+                        <li>Android v4.1 (Jelly Bean) OS</li>
+                        <li>Battery STAMINA Mode for Outstanding Battery Life</li>
+                        <li>Great Entertainment Contents Offering through Sony Unique Application</li>
+                        <li>0.3 MP Secondary Camera</li>
+                        <li>1 GHz Qualcomm Snapdragon S4 Dual Core Processor</li>
+                        <li>5 MP Primary Camera</li>
+                        <li>4-inch Hi-quality Display for Immersive Entertainment</li>
+                        <li>Wi-Fi Enabled</li>
+                        <li>Expandable Storage Capacity of 32 GB</li>
+                        <li>Turning touch into magic for the average user is this smartphone from Sony, the Xperia M
+                            that strives to make life simpler, easier.</i></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <a href="javascript:void(0)" onclick="getImgSpecPopup(this)" id="close" class="closeButton">
+                    <button>Close</button>
+                </a>
+            </div>
+        </div>
+        <!--Hidden Div END -->
+
+
+        <div class="productsDiv" id="productsDivId">
+
+            <div class="productsEven prodHeading" id="prodHeadingDiv">
+                <span class="mobileImg">Mobile</span>
+                <span class="mobileName">Model</span>
+                <span class="mobileColor">Color</span>
+                <span class="mobilePrice">Cost</span>
+                <span class="mobileQuantity">Quantity</span>
+                <span class="addToCart">Add to cart</span>
+            </div>
+            <div class="productsOdd" id="mBlackDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="mBlack"><img
+                        src="assets/images/sony-xperia-m-400x400-Black.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia M"/></a></span>
+                <span class="mobileName">Sony Xperia M</span>
+                <span class="mobileColor">Black</span>
+                <span class="mobilePrice">Rs. 10720</span>
+                <span class="mobileQuantity"><input type="text" id="mBlackQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('mBlackDiv', 'Sony Xperia M', 'Black', 10720,'mBlackQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+            <div class="productsEven" id="cBlackDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="cBlack"><img
+                        src="assets/images/sony-xperia-c-400x400-Black.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia c"/></a></span>
+                <span class="mobileName">Sony Xperia C</span>
+                <span class="mobileColor">Black</span>
+                <span class="mobilePrice">Rs. 16490</span>
+                <span class="mobileQuantity"><input type="text" id="cBlackQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('cBlackDiv', 'Sony Xperia C', 'Black', 16490,'cBlackQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+            <div class="productsOdd" id="eBlackDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="eBlack"><img
+                        src="assets/images/sony-xperia-e-400x400-Black.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia e"/></a></span>
+                <span class="mobileName">Sony Xperia E</span>
+                <span class="mobileColor">Black</span>
+                <span class="mobilePrice">Rs. 6181</span>
+                <span class="mobileQuantity"><input type="text" id="eBlackQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('eBlackDiv', 'Sony Xperia E', 'Black', 6181,'eBlackQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+            <div class="productsEven" id="eWhiteDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="eWhite"><img
+                        src="assets/images/sony-xperia-e-400x400-White.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia E"/></a></span>
+                <span class="mobileName">Sony Xperia E</span>
+                <span class="mobileColor">White</span>
+                <span class="mobilePrice">Rs. 6599</span>
+                <span class="mobileQuantity"><input type="text" id="eWhiteQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('eWhiteDiv', 'Sony Xperia E', 'White', 6599,'eWhiteQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+            <div class="productsOdd" id="spBlackDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="spBlack"><img
+                        src="assets/images/sony-xperia-sp-400x400-Black.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia SP"/></a></span>
+                <span class="mobileName">Sony Xperia SP</span>
+                <span class="mobileColor">Black</span>
+                <span class="mobilePrice">Rs. 16990</span>
+                <span class="mobileQuantity"><input type="text" id="spBlackQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('spBlackDiv', 'Sony Xperia SP', 'Black', 16990,'spBlackQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+            <div class="productsEven" id="lBlackDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="lBlack"><img
+                        src="assets/images/sony-xperia-l-400x400-Black.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia L"/></a></span>
+                <span class="mobileName">Sony Xperia L</span>
+                <span class="mobileColor">Black</span>
+                <span class="mobilePrice">Rs. 13261</span>
+                <span class="mobileQuantity"><input type="text" id="lBlackQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('lBlackDiv', 'Sony Xperia L', 'Black', 13261,'lBlackQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+            <div class="productsOdd" id="t2BlackDiv">
+                <span class="mobileImg"><a href="javascript:void(0)" onclick="getImgSpecPopup(this);" id="t2Black"><img
+                        src="assets/images/sony-xperia-t2-ultra-400x400-Black.jpeg" width="50px" height="100px"
+                        alt="Sony Xperia T2"/></a></span>
+                <span class="mobileName">Sony Xperia T2 Ultra</span>
+                <span class="mobileColor">Black</span>
+                <span class="mobilePrice">Rs. 22940</span>
+                <span class="mobileQuantity"><input type="text" id="t2BlackQty"></span>
+                <span class="addToCart"><a href="javascript:void(0)"
+                                           onclick="addItemToCart('t2BlackDiv', 'Sony Xperia T2 Ultra', 'Black', 22940,'t2BlackQty');">
+                    <button>Add to cart</button>
+                </a></span>
+            </div>
+        </div>
+
+    </article>
+
+    <br/><br/>
+
+    <article id="cartItemsPart">
+        <div class="productsEven prodHeading" id="prodHeadingDivInCart">
+            <span class="mobileImg">Mobile</span>
+            <span class="mobileName">Model</span>
+            <span class="mobileColor">Color</span>
+            <span class="mobilePrice">Cost</span>
+            <span class="mobileQuantity">Quantity</span>
+            <span class="mobileQuantity">Update Quantity</span>
+            <span class="addToCart">Delete</span>
+        </div>
+    </article>
+    <br/><br/>
+</section>
+
+<footer id="footer">
+    <section>
+        <span class="rights"><a href="#">All Rights Reserved @ RajeshwaR 2014</a></span>
+        <span class="terms"><a href="#">Terms and Policies</a></span>
+    </section>
+</footer>
+
+</body>
+</html>
